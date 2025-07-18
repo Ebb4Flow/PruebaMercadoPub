@@ -1,7 +1,10 @@
 async function buscar() {
-  const fecha = document.getElementById('fecha').value;
+  const fechaInput = document.getElementById('fecha').value;
   const tablaBody = document.querySelector('#tabla-resultados tbody');
   tablaBody.innerHTML = "<tr><td colspan='3'>Cargando...</td></tr>";
+
+  const [year, month, day] = fechaInput.split('-');
+  const fecha = `${day}${month}${year}`;
 
   try {
     const res = await fetch(`/api/buscar?fecha=${fecha}`);

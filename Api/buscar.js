@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const { fecha = "07172025", estado = "aceptada" } = req.query;
-  const TICKET = "TU_TICKET_AQUI";
+  const TICKET = "F8537A18-6766-4DEF-9E59-426B4FEE2844";
 
   const url = "https://api.mercadopublico.cl/servicios/v1/publico/ordenesdecompra.json";
   const params = new URLSearchParams({
